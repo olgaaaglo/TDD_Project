@@ -28,5 +28,10 @@ void CircularBuffer::add(int i)
 
 int CircularBuffer::getElement(unsigned index) const
 {
-    
+    return vec[index];
+}
+
+int CircularBuffer::remove()
+{
+
 }

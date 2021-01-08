@@ -11,6 +11,7 @@ public:
     unsigned getSize() const;
     void add(int i);
     int getElement(unsigned index) const;
+    int remove();
 
 private:
     std::vector<int> vec;

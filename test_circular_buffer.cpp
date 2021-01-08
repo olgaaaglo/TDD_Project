@@ -40,3 +40,8 @@ TEST_F(CircularBufferTest, AddWhenFullTest)
 {
     EXPECT_EQ(cb->getElement(0), 6);
 }
+
+TEST_F(CircularBufferTest, RemoveElementTest)
+{
+    EXPECT_EQ(cb->remove(), 7);
+}
