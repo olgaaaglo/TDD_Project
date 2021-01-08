@@ -9,9 +9,11 @@ public:
 
     unsigned getAllocatedSize() const;
     unsigned getSize() const;
+
     void add(int i);
-    int getElement(unsigned index) const;
     int remove();
+
+    int getElement(unsigned index) const;
 
 private:
     std::vector<int> vec;

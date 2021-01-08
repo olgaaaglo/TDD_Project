@@ -1,5 +1,4 @@
 #include "CircularBuffer.h"
-#include <iostream>
 
 CircularBuffer::CircularBuffer(unsigned s)
 {
