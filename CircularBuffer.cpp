@@ -33,7 +33,15 @@ int CircularBuffer::getElement(unsigned index) const
 
 int CircularBuffer::remove()
 {
-    buffIter--;
-    size--;
-    return vec[buffIter];
+    if(size > 0)
+    {
+        buffIter--;
+        size--;
+        return vec[buffIter];
+    }
+    else
+    {
+       throw empty_buffor_exception();
+    }
+    
 }
