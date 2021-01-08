@@ -15,6 +15,9 @@ public:
     void SetUp() override
     {
         cb = new CircularBuffer(5);
+        for(int i = 1; i < 4; i++)
+            cb->add(i);
+
     }
     void TearDown() override
     {
@@ -26,4 +29,9 @@ public:
 TEST_F(CircularBufferTest, GetAllocatedSizeTest)
 {
     EXPECT_EQ(cb->getAllocatedSize(), 5);
+}
+
+TEST_F(CircularBufferTest, GetSizeTest)
+{
+    EXPECT_EQ(cb->getSize(), 3);
 }
