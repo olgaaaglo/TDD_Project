@@ -6,5 +6,5 @@ CircularBuffer::CircularBuffer(unsigned s)
 }
 unsigned CircularBuffer::getAllocatedSize() const
 {
-    
+    return vec.size();
 }
