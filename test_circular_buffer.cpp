@@ -1,16 +1,29 @@
 #include "test.h"
+#include "CircularBuffer.h"
 
-TEST(CircularBufferTest, Construct)
+
+TEST(CircularBufferTest1, Construct)
 {
     CircularBuffer cb(5);
-    EXPECT_EQ(cb.size, 5);
+    EXPECT_EQ(cb.vec.size(), 5);
 }
 
-/*class CircularBufferTest : public ::testing::Test
+class CircularBufferTest : public ::testing::Test
 {
-    CircularBuffer cb;
+public:
+    CircularBuffer* cb;
     void SetUp() override
     {
-
+        cb = new CircularBuffer(5);
     }
-};*/
+    void TearDown() override
+    {
+        delete cb;
+    }
+
+};
+
+TEST_F(CircularBufferTest, GetAllocatedSizeTest)
+{
+    EXPECT_EQ(cb->getAllocatedSize(), 5);
+}

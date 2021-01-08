@@ -6,6 +6,7 @@ class CircularBuffer
 {
 public:
     CircularBuffer(unsigned s=0);
+    unsigned getAllocatedSize() const;
 private:
     std::vector<int> vec;
     unsigned size;
