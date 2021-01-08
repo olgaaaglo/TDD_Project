@@ -18,3 +18,8 @@ private:
     unsigned size;
     unsigned buffIter;
 };
+
+class empty_buffor_exception : public std::exception
+{
+
+};

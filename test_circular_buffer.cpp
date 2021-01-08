@@ -45,3 +45,9 @@ TEST_F(CircularBufferTest, RemoveElementTest)
 {
     EXPECT_EQ(cb->remove(), 7);
 }
+
+TEST_F(CircularBufferTest, RemoveElementWhenEmptyTest)
+{
+    CircularBuffer cb;
+    EXPECT_THROW(cb.remove(), empty_buffor_exception);
+}
