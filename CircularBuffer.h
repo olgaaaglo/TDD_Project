@@ -14,4 +14,5 @@ public:
 private:
     std::vector<int> vec;
     unsigned size;
+    unsigned buffIter;
 };

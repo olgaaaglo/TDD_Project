@@ -15,7 +15,7 @@ public:
     void SetUp() override
     {
         cb = new CircularBuffer(5);
-        for(int i = 1; i < 4; i++)
+        for(int i = 1; i < 8; i++)
             cb->add(i);
 
     }
@@ -33,5 +33,5 @@ TEST_F(CircularBufferTest, GetAllocatedSizeTest)
 
 TEST_F(CircularBufferTest, GetSizeTest)
 {
-    EXPECT_EQ(cb->getSize(), 3);
+    EXPECT_EQ(cb->getSize(), 5);
 }
