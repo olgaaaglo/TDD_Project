@@ -25,3 +25,8 @@ void CircularBuffer::add(int i)
     if(size < getAllocatedSize())
         size++;
 }
+
+int CircularBuffer::getElement(unsigned index) const
+{
+    
+}

@@ -35,3 +35,8 @@ TEST_F(CircularBufferTest, GetSizeTest)
 {
     EXPECT_EQ(cb->getSize(), 5);
 }
+
+TEST_F(CircularBufferTest, AddWhenFullTest)
+{
+    EXPECT_EQ(cb->getElement(0), 6);
+}
